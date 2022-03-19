@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.10">
+  <GVL Name="Inputs" Id="{b040d1d9-8e59-4fa8-97ed-e7fbf86322ce}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	bTest 					AT %I* : BOOL;
+	// Digital Inputs
+	bManualModeSelector		AT %I* : BOOL;
+	bAutoModeSelector		AT %I* : BOOL;
+	bStartButton			AT %I* : BOOL;
+	bStopButton				AT %I* : BOOL;
+	
+	// Analog Inputs
+	stJoyX 				: ST_AnalogInput;
+	stJoyY				: ST_AnalogInput;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

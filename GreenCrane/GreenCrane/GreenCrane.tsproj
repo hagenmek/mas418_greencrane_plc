@@ -1702,10 +1702,37 @@ Bit1: Value smaller than Limit2]]></Comment>
 							<CoeProfile ProfileNo="26219401"/>
 						</EtherCAT>
 					</Box>
+					<Box Id="20" BoxType="9099" BoxFlags="#x00000020">
+						<Name>Term 20 (EL4032)</Name>
+						<ImageId>1005</ImageId>
+						<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0fc03052" RevisionNo="#x00140000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL4032 2Ch. Ana. Output +/-10V, 12bit" Desc="EL4032" PortABoxInfo="#x0100000b">
+							<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
+							<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
+							<SyncMan>001104002400010003000000000000000400001124010000</SyncMan>
+							<SyncMan>801100000000000004000000000000000000801100000000</SyncMan>
+							<Fmmu>0000000000000000001100020100000001000000000000000000000000000000</Fmmu>
+							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+							<BootStrapData>0010f400f410f400</BootStrapData>
+							<DcMode>53796e6368726f6e0000000000000000534d2d53796e6368726f6e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
+							<DcMode>4443000000000000000000000000000044432d53796e6368726f6e0000000000000000000000000000000000000000000000000000000000a0860100000000070100000000000000000000000000000000000000000000000000000000000000</DcMode>
+							<Pdo Name="AO Outputs Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry Name="Analog output" Index="#x7000" Sub="#x11" Flags="#x00010000">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AO Outputs Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry Name="Analog output" Index="#x7010" Sub="#x11" Flags="#x00010000">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<CoeProfile ProfileNo="26219401"/>
+							<CoeProfile ProfileNo="26219401"/>
+						</EtherCAT>
+					</Box>
 					<Box Id="12" BoxType="9099">
 						<Name>EndCap (EL9011)</Name>
 						<ImageId>1002</ImageId>
-						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x0100000b"/>
+						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x01000014"/>
 					</Box>
 				</Box>
 				<EtherCAT/>
@@ -1714,6 +1741,7 @@ Bit1: Value smaller than Limit2]]></Comment>
 	</Project>
 	<Mappings>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500840000403}" Id="#x02030020"/>
 		<OwnerA Name="TIPC^PLC_daniel^PLC_daniel Instance">
 			<OwnerB Name="TIID^PLC (EtherCAT)^PLC Rack (EK1200)^DI (EL1008)">
 				<Link VarA="PlcTask Inputs^Inputs.bTest" VarB="Channel 1^Input"/>
@@ -1732,8 +1760,6 @@ Bit1: Value smaller than Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^Inputs.stSpoolPos.stStatus" VarB="AI Standard Channel 4^Status"/>
 			</OwnerB>
 			<OwnerB Name="TIID^RIO (EtherCAT)^RIO Rack (EK1100)^AI2 (EL3068)">
-				<Link VarA="PlcTask Inputs^Inputs.stFlowReturnSide.nValue" VarB="AI Standard Channel 7^Value"/>
-				<Link VarA="PlcTask Inputs^Inputs.stFlowReturnSide.stStatus" VarB="AI Standard Channel 7^Status"/>
 				<Link VarA="PlcTask Inputs^Inputs.stPressureCompensator.nValue" VarB="AI Standard Channel 3^Value"/>
 				<Link VarA="PlcTask Inputs^Inputs.stPressureCompensator.stStatus" VarB="AI Standard Channel 3^Status"/>
 				<Link VarA="PlcTask Inputs^Inputs.stPressureLhvSide.nValue" VarB="AI Standard Channel 5^Value"/>
@@ -1746,6 +1772,13 @@ Bit1: Value smaller than Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^Inputs.stPressureRodSide.stStatus" VarB="AI Standard Channel 6^Status"/>
 				<Link VarA="PlcTask Inputs^Inputs.stPressureSupply.nValue" VarB="AI Standard Channel 1^Value"/>
 				<Link VarA="PlcTask Inputs^Inputs.stPressureSupply.stStatus" VarB="AI Standard Channel 1^Status"/>
+			</OwnerB>
+			<OwnerB Name="TIID^RIO (EtherCAT)^RIO Rack (EK1100)^AI3 (EL3174)">
+				<Link VarA="PlcTask Inputs^Inputs.stFlowReturnSide.nValue" VarB="AI Standard Channel 1^Value"/>
+				<Link VarA="PlcTask Inputs^Inputs.stFlowReturnSide.stStatus" VarB="AI Standard Channel 1^Status"/>
+			</OwnerB>
+			<OwnerB Name="TIID^RIO (EtherCAT)^RIO Rack (EK1100)^AO (EL4104)">
+				<Link VarA="PlcTask Outputs^Outputs.nValveOutput" VarB="AO Output Channel 1^Analog output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^RIO (EtherCAT)^RIO Rack (EK1100)^DI (EL1008)">
 				<Link VarA="PlcTask Inputs^Inputs.bAutoModeSelector" VarB="Channel 1^Input"/>

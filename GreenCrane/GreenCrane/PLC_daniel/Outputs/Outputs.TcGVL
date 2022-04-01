@@ -3,9 +3,16 @@
   <GVL Name="Outputs" Id="{8632dc2c-f2e8-400e-b1a8-ffb8dbbb7ffb}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
+	// PLC Rack
 	// Digital Outputs
-	bGreenLight 	AT %Q* : BOOL;
-	bRedLight 		AT %Q* : BOOL;
+	bTest					 AT %Q* : BOOL;
+	
+	// RIO Rack
+	// Digital Outputs
+	bGreenLight 			AT %Q* : BOOL;
+	bRedLight 				AT %Q* : BOOL;
+	// Analog Outputs
+	nValveOutput 			AT %Q* : INT;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

@@ -17,19 +17,19 @@
     <LibraryReferences>{b40013ff-2764-4e19-915d-0c0df67ebec9}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="GVLs\Outputs.TcGVL">
-      <SubType>Code</SubType>
-      <LinkAlways>true</LinkAlways>
-    </Compile>
     <Compile Include="Inputs\Inputs.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
-    <Compile Include="Inputs\Struct\ST_AnalagInputStatus.TcDUT">
+    <Compile Include="Inputs\Struct\ST_AnalogInputStatus.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Inputs\Struct\ST_AnalogInput.TcDUT">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Outputs\Outputs.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
@@ -43,6 +43,7 @@
     <Folder Include="GVLs" />
     <Folder Include="Inputs" />
     <Folder Include="Inputs\Struct" />
+    <Folder Include="Outputs" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.10">
-  <DUT Name="ST_AnalagInputStatus" Id="{b7c000c0-537b-4f49-963a-6229fec1693f}">
-    <Declaration><![CDATA[TYPE ST_AnalagInputStatus :
+  <DUT Name="ST_AnalogInputStatus" Id="{b7c000c0-537b-4f49-963a-6229fec1693f}">
+    <Declaration><![CDATA[TYPE ST_AnalogInputStatus :
 STRUCT
 	Underrange 		: BIT; // 0.0
 	Overrange 		: BIT; // 0.1
